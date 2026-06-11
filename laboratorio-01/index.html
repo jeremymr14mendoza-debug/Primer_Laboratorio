@@ -1,23 +1,167 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página HTML5</title>
+    <title>Colegio San Martín</title>
 </head>
 <body>
 
     <header>
+        <img src="img/logo-sanmartin.png" alt="Logo oficial del Colegio San Martín" width="120">
+
+        <h1>Colegio San Martín</h1>
+        <p>Formando líderes con valores y excelencia académica</p>
+
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#oferta">Oferta Académica</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-    </nav>
-
     <main>
+
+        <!-- Sección Hero -->
+        <section id="inicio">
+            <h2>Bienvenidos al Colegio San Martín</h2>
+
+            <img src="img/colegio.jpg"
+                 alt="Vista principal de las instalaciones del Colegio San Martín">
+
+            <p>
+                Somos una institución educativa comprometida con la formación
+                integral de nuestros estudiantes, promoviendo la excelencia
+                académica, los valores humanos y el desarrollo tecnológico.
+            </p>
+
+            <a href="#contacto">Solicitar información</a>
+        </section>
+
+        <!-- Oferta Académica -->
+        <section id="oferta">
+            <h2>Oferta Académica</h2>
+
+            <article>
+                <h3>Educación Académica</h3>
+                <p>
+                    Programas de enseñanza enfocados en matemáticas, ciencias,
+                    idiomas y estudios sociales para preparar a los estudiantes
+                    para la educación superior.
+                </p>
+            </article>
+
+            <article>
+                <h3>Tecnología e Informática</h3>
+                <p>
+                    Los estudiantes desarrollan habilidades en programación,
+                    herramientas digitales y uso responsable de la tecnología.
+                </p>
+            </article>
+
+            <article>
+                <h3>Actividades Deportivas y Culturales</h3>
+                <p>
+                    Fomentamos el desarrollo físico y artístico mediante
+                    equipos deportivos, música, danza y actividades culturales.
+                </p>
+            </article>
+        </section>
+
+        <!-- Testimonios -->
+        <section id="testimonios">
+            <h2>Opiniones de Nuestra Comunidad</h2>
+
+            <article>
+                <img src="img/estudiante1.jpg"
+                     alt="Fotografía de estudiante del Colegio San Martín"
+                     width="150">
+
+                <blockquote>
+                    "Gracias al Colegio San Martín he desarrollado habilidades
+                    académicas y personales que me preparan para mi futuro."
+                </blockquote>
+
+                <p><strong>Ana Rodríguez - Estudiante</strong></p>
+            </article>
+
+            <article>
+                <img src="img/padre1.jpg"
+                     alt="Fotografía de padre de familia"
+                     width="150">
+
+                <blockquote>
+                    "La formación en valores y la calidad educativa hacen de
+                    esta institución una excelente elección."
+                </blockquote>
+
+                <p><strong>Carlos Jiménez - Padre de Familia</strong></p>
+            </article>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto">
+            <h2>Contáctenos</h2>
+
+            <p>
+                Si desea más información sobre matrículas o programas
+                educativos, complete el siguiente formulario.
+            </p>
+
+            <form action="#" method="post" aria-label="Formulario de contacto">
+
+                <label for="nombre">Nombre completo:</label><br>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <br><br>
+
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo" required>
+
+                <br><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono">
+
+                <br><br>
+
+                <label for="mensaje">Consulta:</label><br>
+                <textarea id="mensaje"
+                          name="mensaje"
+                          rows="5"
+                          required></textarea>
+
+                <br><br>
+
+                <button type="submit" aria-label="Enviar formulario de contacto">
+                    Enviar Consulta
+                </button>
+
+            </form>
+        </section>
+
     </main>
 
     <footer>
+        <p>&copy; 2026 Colegio San Martín. Todos los derechos reservados.</p>
+
+        <p>
+            Dirección: Estamos ubicados en Barrio Gamonales, Ciudad Quesada |
+            Teléfono: 2461-2906
+            Correo: info@colegiosanmartin.edu
+         
+        </p>
+
+        <nav aria-label="Redes sociales">
+            <a href="https://www.facebook.com/ColegioSanMartin2004">Facebook</a> | 
+             <a href="https://chat.whatsapp.com/L0SooIQTHBi93eCtd44tiW">Whatsapp</a> | 
+        </nav>
     </footer>
 
 </body>
 </html>
+```
