@@ -113,3 +113,11 @@ nav a {
   display: block;
   padding: var(--sp-1);
 }
+
+section {
+  padding: var(--sp-4) var(--sp-2);
+}
+
+section:nth-of-type(even) {
+  background-color: var(--clr-surface);
+}
