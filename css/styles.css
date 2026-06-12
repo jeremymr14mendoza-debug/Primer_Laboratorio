@@ -135,7 +135,15 @@ section:nth-of-type(even) {
 }
 
 
-#oferta article,
+#oferta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+#oferta article {
+  flex: 1;
+}
 #testimonios article {
   background-color: var(--clr-white);
   border: 1px solid #e2e8f0;
