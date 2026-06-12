@@ -121,3 +121,26 @@ section {
 section:nth-of-type(even) {
   background-color: var(--clr-surface);
 }
+
+
+#oferta article,
+#testimonios article {
+  background-color: var(--clr-white);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  padding: var(--sp-3);
+  margin-bottom: var(--sp-3);
+}
+
+#testimonios img {
+  border-radius: 50%;
+  margin-bottom: var(--sp-2);
+}
+
+blockquote {
+  font-style: italic;
+  color: var(--clr-text-light);
+  border-left: 4px solid var(--clr-secondary);
+  padding-left: var(--sp-2);
+  margin-bottom: var(--sp-2);
+}
