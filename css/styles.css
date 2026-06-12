@@ -29,3 +29,49 @@
   /* Bordes */
   --radius: 0.5rem;
 }
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  color: var(--clr-primary);
+  margin-bottom: var(--sp-2);
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+p {
+  margin-bottom: var(--sp-2);
+}
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
