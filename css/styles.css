@@ -1,0 +1,29 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colores */
+  --clr-primary: #1F3864;
+  --clr-secondary: #FFC000;
+  --clr-bg: #ffffff;
+  --clr-text: #1e293b;
+  --clr-text-light: #64748b;
+
+  /* Tipografía */
+  --font-base: Arial, Helvetica, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+
+  /* Espaciado */
+  --sp-1: 0.5rem;
+  --sp-2: 1rem;
+  --sp-3: 1.5rem;
+  --sp-4: 2rem;
+  --sp-5: 3rem;
+
+  /* Bordes */
+  --radius: 0.5rem;
+}
