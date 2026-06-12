@@ -231,3 +231,66 @@ footer nav {
 footer nav a {
   margin: 0 var(--sp-1);
 }
+
+
+@media (min-width: 768px) {
+
+  /* Header y nav en fila */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+  }
+
+  header img {
+    margin: 0;
+  }
+
+  nav ul {
+    flex-direction: row;
+    width: auto;
+    gap: var(--sp-2);
+  }
+
+  /* Oferta académica en fila (Flexbox) */
+  #oferta {
+    flex-direction: row;
+  }
+
+  /* Tamaños de fuente un poco más grandes */
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  /* Limitar el ancho máximo del contenido y centrarlo */
+  header,
+  section {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Más espacio en las secciones */
+  section {
+    padding: var(--sp-5) var(--sp-4);
+  }
+
+  /* Testimonios: forzar exactamente 2 columnas en vez de auto-fit libre */
+  #testimonios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+}
