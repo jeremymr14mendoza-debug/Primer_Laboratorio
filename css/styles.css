@@ -144,3 +144,41 @@ blockquote {
   padding-left: var(--sp-2);
   margin-bottom: var(--sp-2);
 }
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  max-width: 500px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: var(--sp-1);
+}
+
+input,
+textarea {
+  font-family: var(--font-base);
+  font-size: 1rem;
+  padding: var(--sp-1);
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius);
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: var(--clr-secondary);
+  color: var(--clr-text);
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--sp-2);
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+  background-color: #e6ac00;
+}
