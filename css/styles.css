@@ -162,6 +162,12 @@ section:nth-of-type(even) {
   text-align: center;
 }
 
+#testimonios article h3 {
+  color: var(--clr-text);
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
 #testimonios img {
   border-radius: 50%;
   margin-bottom: var(--sp-2);
@@ -199,8 +205,8 @@ textarea {
 }
 
 button[type="submit"] {
-  background-color: var(--clr-secondary);
-  color: var(--clr-text);
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
   border: none;
   border-radius: var(--radius);
   padding: var(--sp-2);
@@ -210,7 +216,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color:  #005bbf;
+  background-color: #005bbf;
 }
 
 footer {
