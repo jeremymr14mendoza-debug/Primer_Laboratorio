@@ -99,3 +99,17 @@ header p {
 header img {
   margin: 0 auto var(--sp-2);
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  margin-top: var(--sp-2);
+}
+
+nav a {
+  color: var(--clr-white);
+  display: block;
+  padding: var(--sp-1);
+}
