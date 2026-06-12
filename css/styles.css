@@ -5,19 +5,21 @@
 }
 
 :root {
-  /* Colores */
-  --clr-primary: #1F3864;
-  --clr-secondary: #FFC000;
+  /* Colores - Identidad Colegio San Martín */
+  --clr-primary: #1F3864;     
+  --clr-secondary: #FFC000;   
   --clr-bg: #ffffff;
+  --clr-surface: #f4f6fa;
   --clr-text: #1e293b;
-  --clr-text-light: #64748b;
+  --clr-text-light: #5b6472;
+  --clr-white: #ffffff;
 
   /* Tipografía */
   --font-base: Arial, Helvetica, sans-serif;
   --font-size-base: 1rem;
   --line-height-base: 1.6;
 
-  /* Espaciado */
+  /* Espaciado (escala) */
   --sp-1: 0.5rem;
   --sp-2: 1rem;
   --sp-3: 1.5rem;
@@ -27,4 +29,3 @@
   /* Bordes */
   --radius: 0.5rem;
 }
-
