@@ -1,35 +1,34 @@
+/* === RESET UNIVERSAL === */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* === VARIABLES GLOBALES === */
 :root {
-  /* Colores - Identidad Colegio San Martín */
-  --clr-primary: #0077ff;     
-  --clr-secondary: #00c3ff;   
+  --clr-primary: #0055cc;     /* Azul institucional */
+  --clr-secondary: #00c3ff;   /* Celeste para foco y acentos */
   --clr-bg: #ffffff;
-  --clr-surface: #f4f6fa;
+  --clr-surface: #f4f6fa;     /* Fondo secciones alternas */
   --clr-text: #1e293b;
   --clr-text-light: #5b6472;
   --clr-white: #ffffff;
 
-  /* Tipografía */
   --font-base: Arial, Helvetica, sans-serif;
   --font-size-base: 1rem;
   --line-height-base: 1.6;
 
-  /* Espaciado (escala) */
   --sp-1: 0.5rem;
   --sp-2: 1rem;
   --sp-3: 1.5rem;
   --sp-4: 2rem;
   --sp-5: 3rem;
 
-  /* Bordes */
   --radius: 0.5rem;
 }
 
+/* === ESTILOS BASE === */
 body {
   font-family: var(--font-base);
   font-size: var(--font-size-base);
@@ -44,17 +43,9 @@ h1, h2, h3, h4 {
   margin-bottom: var(--sp-2);
 }
 
-h1 {
-  font-size: 1.8rem;
-}
-
-h2 {
-  font-size: 1.4rem;
-}
-
-h3 {
-  font-size: 1.15rem;
-}
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.15rem; }
 
 p {
   margin-bottom: var(--sp-2);
@@ -70,12 +61,14 @@ a:focus {
   text-decoration: underline;
 }
 
+/* Imágenes responsivas */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* === FOCO VISIBLE (WCAG 2.1) === */
 a:focus,
 button:focus,
 input:focus,
@@ -84,6 +77,7 @@ textarea:focus {
   outline-offset: 2px;
 }
 
+/* === HEADER - Flexbox en columna (móvil) === */
 header {
   background-color: var(--clr-primary);
   color: var(--clr-white);
@@ -104,15 +98,12 @@ header img {
   margin: 0 auto;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--sp-1);
-  width: 100%;
+/* Oculto en móvil, visible desde 768px */
+header p {
+  display: none;
 }
 
+/* === NAVEGACIÓN === */
 nav a {
   color: var(--clr-white);
   display: block;
@@ -126,15 +117,50 @@ nav a:focus {
   text-decoration: none;
 }
 
+/* === MENÚ HAMBURGUESA (móvil) === */
+#menu-toggle {
+  display: block;
+  background: none;
+  border: 2px solid var(--clr-white);
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Oculto por defecto, JS agrega clase "abierto" */
+#menu-lista {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-1);
+  width: 100%;
+  list-style: none;
+}
+
+#menu-lista.abierto {
+  display: flex;
+}
+
+/* === SECCIONES === */
 section {
   padding: var(--sp-4) var(--sp-2);
 }
 
+/* Alterna fondo en secciones pares */
 section:nth-of-type(even) {
   background-color: var(--clr-surface);
 }
 
-
+/* === OFERTA ACADÉMICA - Flexbox === */
 #oferta {
   display: flex;
   flex-direction: column;
@@ -143,13 +169,20 @@ section:nth-of-type(even) {
 
 #oferta article {
   flex: 1;
+  background-color: var(--clr-white);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  padding: var(--sp-3);
 }
+
+/* === TESTIMONIOS - CSS Grid === */
 #testimonios {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--sp-3);
 }
 
+/* Título ocupa todas las columnas */
 #testimonios > h2 {
   grid-column: 1 / -1;
 }
@@ -162,6 +195,7 @@ section:nth-of-type(even) {
   text-align: center;
 }
 
+/* h3 semántico con estilo de texto normal */
 #testimonios article h3 {
   color: var(--clr-text);
   font-size: 1rem;
@@ -171,6 +205,8 @@ section:nth-of-type(even) {
 #testimonios img {
   border-radius: 50%;
   margin-bottom: var(--sp-2);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 blockquote {
@@ -181,10 +217,7 @@ blockquote {
   margin-bottom: var(--sp-2);
 }
 
-
-/* ============================
-   FORMULARIO DE CONTACTO
-============================ */
+/* === FORMULARIO DE CONTACTO - Flexbox === */
 form {
   display: flex;
   flex-direction: column;
@@ -192,6 +225,7 @@ form {
   max-width: 500px;
 }
 
+/* Agrupa label + input con espacio uniforme */
 .form-grupo {
   display: flex;
   flex-direction: column;
@@ -213,6 +247,7 @@ textarea {
   width: 100%;
 }
 
+/* Borde azul al enfocar */
 input:focus,
 textarea:focus {
   border-color: var(--clr-primary);
@@ -230,9 +265,10 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #005bbf;
+  background-color: #003d99;
 }
 
+/* Oculto por defecto, JS lo muestra al enviar */
 #mensaje-exito {
   display: none;
   background-color: #d1fae5;
@@ -243,41 +279,17 @@ button[type="submit"]:hover {
   font-weight: bold;
 }
 
-label {
-  font-weight: bold;
-  margin-bottom: var(--sp-1);
-}
-
-input,
-textarea {
-  font-family: var(--font-base);
-  font-size: 1rem;
-  padding: var(--sp-1);
-  border: 1px solid #cbd5e1;
-  border-radius: var(--radius);
-  width: 100%;
-}
-
-button[type="submit"] {
-  background-color: var(--clr-primary);
-  color: var(--clr-white);
-  border: none;
-  border-radius: var(--radius);
-  padding: var(--sp-2);
-  font-weight: bold;
-  cursor: pointer;
-  align-self: flex-start;
-}
-
-button[type="submit"]:hover {
-  background-color: #005bbf;
-}
-
+/* === FOOTER === */
 footer {
   background-color: var(--clr-primary);
   color: var(--clr-white);
   text-align: center;
   padding: var(--sp-3) var(--sp-2);
+}
+
+footer p {
+  color: var(--clr-white);
+  margin-bottom: var(--sp-1);
 }
 
 footer a {
@@ -292,42 +304,10 @@ footer nav a {
   margin: 0 var(--sp-1);
 }
 
-/* ============================
-   MENÚ HAMBURGUESA - Mobile
-============================ */
-#menu-toggle {
-  display: block;
-  background: none;
-  border: 2px solid var(--clr-white);
-  color: var(--clr-white);
-  font-size: 1.5rem;
-  padding: var(--sp-1) var(--sp-2);
-  border-radius: var(--radius);
-  cursor: pointer;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-#menu-lista {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--sp-1);
-  width: 100%;
-}
-
-#menu-lista.abierto {
-  display: flex;
-}
-
+/* === MEDIA QUERY - TABLET (768px+) === */
 @media (min-width: 768px) {
 
-  /* Header y nav en fila */
+  /* Header en fila */
   header {
     flex-direction: row;
     justify-content: space-between;
@@ -340,36 +320,24 @@ nav {
     margin: 0;
   }
 
-  nav ul {
-    flex-direction: row;
-    width: auto;
-    gap: var(--sp-2);
+  /* Mostrar subtítulo desde tablet */
+  header p {
+    display: block;
   }
 
-  /* Oferta académica en fila (Flexbox) */
-  #oferta {
-    flex-direction: row;
-  }
-
-  /* Tamaños de fuente un poco más grandes */
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.7rem;
-  }
-
+  /* Ocultar botón hamburguesa */
   #menu-toggle {
     display: none;
   }
 
+  /* Nav en fila horizontal */
   nav {
     width: auto;
     flex-direction: row;
     align-items: center;
   }
 
+  /* Menú siempre visible */
   #menu-lista {
     display: flex;
     flex-direction: row;
@@ -377,12 +345,19 @@ nav {
     gap: var(--sp-2);
   }
 
+  /* Tarjetas en fila */
+  #oferta {
+    flex-direction: row;
+  }
+
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.7rem; }
 }
 
-
+/* === MEDIA QUERY - DESKTOP (1024px+) === */
 @media (min-width: 1024px) {
 
-  /* Limitar el ancho máximo del contenido y centrarlo */
+  /* Centrar contenido con ancho máximo */
   header,
   section {
     max-width: 1200px;
@@ -390,17 +365,14 @@ nav {
     margin-right: auto;
   }
 
-  /* Más espacio en las secciones */
   section {
     padding: var(--sp-5) var(--sp-4);
   }
 
-  /* Testimonios: forzar exactamente 2 columnas en vez de auto-fit libre */
+  /* Forzar exactamente 2 columnas */
   #testimonios {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  h1 {
-    font-size: 2.6rem;
-  }
+  h1 { font-size: 2.6rem; }
 }
