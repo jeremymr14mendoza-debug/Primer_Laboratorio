@@ -182,11 +182,65 @@ blockquote {
 }
 
 
+/* ============================
+   FORMULARIO DE CONTACTO
+============================ */
 form {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-2);
+  gap: var(--sp-3);
   max-width: 500px;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+label {
+  font-weight: bold;
+  color: var(--clr-text);
+}
+
+input,
+textarea {
+  font-family: var(--font-base);
+  font-size: 1rem;
+  padding: var(--sp-1);
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius);
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--clr-primary);
+}
+
+button[type="submit"] {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--sp-2);
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+  background-color: #005bbf;
+}
+
+#mensaje-exito {
+  display: none;
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+  border-radius: var(--radius);
+  padding: var(--sp-2);
+  font-weight: bold;
 }
 
 label {
@@ -238,6 +292,38 @@ footer nav a {
   margin: 0 var(--sp-1);
 }
 
+/* ============================
+   MENÚ HAMBURGUESA - Mobile
+============================ */
+#menu-toggle {
+  display: block;
+  background: none;
+  border: 2px solid var(--clr-white);
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  padding: var(--sp-1) var(--sp-2);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#menu-lista {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-1);
+  width: 100%;
+}
+
+#menu-lista.abierto {
+  display: flex;
+}
 
 @media (min-width: 768px) {
 
@@ -273,6 +359,24 @@ footer nav a {
   h2 {
     font-size: 1.7rem;
   }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  nav {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #menu-lista {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: var(--sp-2);
+  }
+
 }
 
 

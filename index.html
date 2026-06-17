@@ -16,13 +16,20 @@
         <p>Honor - Sabiduria - Educacion</p>
 
         <nav aria-label="Menú principal">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#oferta">Oferta Académica</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+    <button id="menu-toggle" 
+            aria-expanded="false" 
+            aria-controls="menu-lista"
+            aria-label="Abrir menú de navegación">
+        ☰
+    </button>
+
+    <ul id="menu-lista">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#oferta">Oferta Académica</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
     </header>
 
     <main>
@@ -117,34 +124,44 @@
 
             <form action="#" method="post" aria-label="Formulario de contacto">
 
-                <label for="nombre">Nombre completo:</label><br>
-                <input type="text" id="nombre" name="nombre" required>
+    <div class="form-grupo">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" 
+               required 
+               placeholder="Ej: Juan Pérez">
+    </div>
 
-                <br><br>
+    <div class="form-grupo">
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" 
+               required 
+               placeholder="Ej: juan@correo.com">
+    </div>
 
-                <label for="correo">Correo electrónico:</label><br>
-                <input type="email" id="correo" name="correo" required>
+    <div class="form-grupo">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono"
+               placeholder="Ej: 8888-8888">
+    </div>
 
-                <br><br>
+    <div class="form-grupo">
+        <label for="mensaje">Consulta:</label>
+        <textarea id="mensaje" 
+                  name="mensaje" 
+                  rows="5" 
+                  required
+                  placeholder="Escriba su consulta aquí..."></textarea>
+    </div>
 
-                <label for="telefono">Teléfono:</label><br>
-                <input type="tel" id="telefono" name="telefono">
+    <button type="submit" aria-label="Enviar formulario de contacto">
+        Enviar Consulta
+    </button>
 
-                <br><br>
+    <div id="mensaje-exito" role="alert" aria-live="polite">
+ ¡Consulta enviada con éxito! Nos pondremos en contacto pronto.
+    </div>
 
-                <label for="mensaje">Consulta:</label><br>
-                <textarea id="mensaje"
-                          name="mensaje"
-                          rows="5"
-                          required></textarea>
-
-                <br><br>
-
-                <button type="submit" aria-label="Enviar formulario de contacto">
-                    Enviar Consulta
-                </button>
-
-            </form>
+</form>
         </section>
 
     </main>
